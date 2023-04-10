@@ -12,15 +12,16 @@ inquirer
 .Prompt([
     {
       type: 'input',
-      name: 'name',
       message: 'What is your user name?',
+      name: 'username',
+      
     },
-//     {
-//  //     type: 'checkbox', input
-//  //     message: 'What languages do you know?',
-//       name: 'stack',
-//       choices: ['HTML', 'CSS', 'JavaScript', 'MySQL'],
-//     },
+     {
+         type: 'password', 
+         message: 'What is your password?',
+         name: 'password',
+      
+     },
 //     {
 // //      type: 'list',  input
 //       message: 'What is your preferred method of communication?',
