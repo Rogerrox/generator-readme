@@ -9,8 +9,14 @@ const path = require('path');
 const questions = [
   {
     type: 'input',
+    message: 'What is your name?',
+    name: 'name',
+   },
+    
+  {
+    type: 'input',
     message: 'What is your GitHub username?',
-    name: 'Contributing',
+    name: 'contribution',
    },  
   
    {
@@ -28,7 +34,7 @@ const questions = [
    {
       type: 'input',
       message: 'Please write a short description of your project?',
-      name: 'descripton',
+      name: 'description',
    },
    {
          type: 'checkbox', 

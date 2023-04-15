@@ -31,12 +31,12 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  by $(data,name)
+  by $(data.name)
 
   ${renderLicenseBadge(data.license)}
 
 ## Table of Contents
-*[Installaton](#installation)
+*[Installation](#installation)
 *[Description](#description)
 *[Usage](#usage)
 *[License](#license)
@@ -44,7 +44,7 @@ function generateMarkdown(data) {
 *[Test](#test)
 *[Questions](#questions)
 #Installation
-// These dependencies listed must be installed for this application to work: 
+// These dependencies listed must be installed for this application to work:/n
 
 ## installation
 ${data.installation}
