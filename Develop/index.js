@@ -2,40 +2,49 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+
+
 // TODO: Create an array of questions for user input
 const questions = [
   {
     type: 'input',
     message: 'What is your GitHub username?',
-    name: 'Title',
+    name: 'Contributing',
    },  
   
    {
     type: 'input',
     message: 'What is your email address?',
-    name: 'Title',
+    name: 'email',
    },
   
    {
     type: 'input',
     message: 'What is your project name?',
-    name: 'Title',
+    name: 'title',
    },
-  
-  
-  {
+   
+   {
       type: 'input',
       message: 'Please write a short description of your project?',
-      name: 'Title',
-     },
-     {
-         type: 'input', 
+      name: 'descripton',
+   },
+   {
+         type: 'checkbox', 
          message: 'What kind of license should your project have?',
-         name: 'Description',
-     },
-     {   type: 'input', 
+         name: 'license',
+         choices:['apex','mit','apache','none'],
+   },
+   {   type: 'input', 
          message: 'What command should be run to install dependencies?',
-         name: 'Table of Contents', }
+         name: 'Installation', 
+   },
+   {   type: 'input', 
+   message: 'What technologies were used for this project?',
+   name: 'usage', 
+},
+
+
 ];
      
 // //      type: 'list',  input
@@ -55,7 +64,7 @@ function writeToFile(fileName, data) {
 //     const question = generateReadMe(answers);
 
 //     fs.writeFile('readMe.md', question, (err) =>
-//       err ? console.log(err) : console.log('Success!')
+//       err ? console.log(err) : console.log('Successfully created a readMe!')
 //     );
 // });
 
@@ -69,14 +78,6 @@ function init() {
       writeToFile('README.md', generateMarkdown({ ...inquirerResponses }));
     });
   }
-
-
-
-
-
-
-
-
 
 // Function call to initialize app
 init();
