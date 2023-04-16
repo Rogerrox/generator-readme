@@ -22,7 +22,7 @@ const questions = [
    {
     type: 'input',
     message: 'What is your email address?',
-    name: 'email',
+    name: 'questions',
    },
   
    {
@@ -43,14 +43,19 @@ const questions = [
          choices:['apex','mit','apache','none'],
    },
    {   type: 'input', 
-         message: 'What command should be run to install dependencies?',
-         name: 'Installation', 
+       message: 'What command should be run to install dependencies?',
+       name: 'installation', 
    },
    {   type: 'input', 
    message: 'What technologies were used for this project?',
    name: 'usage', 
 },
 
+{
+  type: 'input',
+  message: 'What commands are needed to test this app?',
+  name: 'test',
+},
 
 ];
      
